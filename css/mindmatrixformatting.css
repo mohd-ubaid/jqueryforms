@@ -1,0 +1,167 @@
+﻿.maindiv
+{
+    width: 100%;
+    height: auto;
+    margin: 0px;
+    padding: 0px;
+    float: left;
+    text-align: left;
+    display: block;
+}
+
+label
+{
+    float: left;
+    width: 100px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-family: Arial, Verdana, Tahoma;
+    font-size: 13px;
+    color: #464646;
+}
+
+.field33
+{
+    display: block;
+    float: left;
+    width: 33%; /*border:1px solid #333333;*/
+    margin-bottom: 5px;
+    height: 60px;
+}
+.field50
+{
+    display: block;
+    float: left;
+    width: 50%; /*border:1px solid #333333;*/
+    margin-bottom: 5px;
+    height: 60px;
+}
+
+.field67
+{
+    display: block;
+    float: right;
+    width: 67%;
+    height: 60px; /* border:1px solid #db4d4d; */
+    margin-bottom: 5px;
+}
+.field100
+{
+    display: block;
+    float: right;
+    width: 100%; /*border:1px solid #4d56db;*/
+    margin-bottom: 5px;
+    height: 80px; /*overflow:auto;*/
+    margin-top: 2px;
+}
+
+.errorfield
+{
+    border: 1px solid red;
+}
+
+.msgclass
+{
+    color: #ff4000;
+    font-style: italic;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input[type=text]:hover
+{
+    border: 2px solid #666666;
+    background-color: #FAFAFA;
+}
+
+input[type=text]
+{
+    border: 1px solid black;
+    height: 15px;
+    background-color: white;
+}
+input[type=text]:focus
+{
+    border: 1px solid black;
+}
+input[type=password]
+{
+    border: 1px solid black;
+    height: 15px;
+    background-color: white;
+}
+input[type=password]:hover
+{
+    border: 2px solid #666666;
+    background-color: #FAFAFA;
+}
+input[type=password]:focus
+{
+    border: 1px solid black;
+}
+
+input[type=submit]
+{
+    border: 1px solid #C0C0C0;
+    padding: 3px 5px 3px 5px;
+    color: #565656;
+    font-family: Arial, Verdana, Tahoma;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #C0C0C0;
+    letter-spacing: 1px; /* cursor: pointer; */
+    text-transform: uppercase;
+}
+
+input[type=submit]:active
+{
+    border: 1px solid #A0A0A0;
+    padding: 3px 5px 3px 5px;
+    color: #000000;
+    font-family: Arial, Verdana, Tahoma;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #C0C0C0;
+    letter-spacing: 1px; /* cursor: pointer; */
+    text-transform: uppercase;
+}
+
+textarea:hover
+{
+    border: 2px solid #666666;
+    background-color: #FAFAFA;
+}
+
+textarea
+{
+    height: 40px;
+    background-color: white;
+    border: 1px solid black;
+}
+textarea:focus
+{
+    border: 1px solid black;
+}
+
+table
+{
+    height: 50px;
+    background-color: white;
+}
+
+
+select
+{
+    border: 1px solid #C5C5C5;
+    background-color: #F8F8F8;
+}
+
+.selectlist
+{
+    height: 50px;
+}
+
+.checkboxlist
+{
+    height: auto;
+}

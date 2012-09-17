@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Form Controls</title>
+    <script type="text/javascript" src="scripts/jquery-1.4.1.js"></script>
+    <script src="scripts/mindmatrixlcontrols.js" type="text/javascript"></script>
+    <script src="scripts/mindmatrixvalidation.js" type="text/javascript"></script>
+    <script src="scripts/tcal.js" type="text/javascript"></script>
+    <link href="css/tcal.css" rel="stylesheet" type="text/css" />
+    <link href="css/jquery.captcha.css" rel="stylesheet" type="text/css" />
+    <script src="scripts/jquery.captcha.js" type="text/javascript"></script>
+    <script src="scripts/mindmatrixformdata.js" type="text/javascript"></script>
+    <link href="css/mindmatrixformatting.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div id="divDisplayField" colmns="2" style="width:700px; border:1px solid black;">
+    </div>
+    <div>
+        <input type="submit" value="Submit" onclick="validateme();formdata.getmydata($('#divDisplayField'));">
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(function () {
+                addtextbox("Name", "myname", 1, "Please enter your Name", "", "", "", 0);
+                addtextbox("Phone", "phonenumber", 1, "please enter phone number here", 3, "enter valid phone number", "", 0);
+                addtextbox("Alpha", "alpha", 0, "please enter here", 9, "enter only characters", "", 0);
+                addtextbox("Currency($)", "currency", 1, "please enter currency here", 8, "enter valid amount", "", 0);
+                addtextbox("email", "email1", 1, "please enter email here", 1, "please enter valid email", "", 1);
+                addtextbox("confirm email", "email2", 0, "none", 6, "email not maching", "email1", 1);
+                addtextbox("URL", "url", 1, "please enter URL here", 2, "enter correct URL", "", 1);
+                addtextbox("Alphanumeric", "alphanumeric", 1, "please enter alphanum here", 10, "Alphanumeric only", "", 1);
+                addtextbox("Number", "number", 0, "enter numbers here", 11, "Only numbers", "", 1);
+                addpassword("Password", "password", 1, "Enter the password", 5, "Enter 8-15 char pass wid atleast 1 small 1 capital letter and 1 number", 1);
+                addtextarea("Textarea", "textarea", 1, "Must be filled", 1);
+                addcheckbox("checkbox", "checkbox1", 1, "please check the box", 1);
+                var radiobuttonlist = new Array("Saab", "Volvo", "BMW", "bugati", "ferrari");
+                var values = new Array(0, 1, 2, 3, 4);
+                addcheckboxlist("CheckboxList", "checkboxlist1", 1, "select atleast 1 item", radiobuttonlist, null, 1);
+                addcheckboxlistsingleselect("Chkbxlstsingle", "checkboxlist2", 1, "select atleast 1 item", radiobuttonlist, null, 1);
+                var dropdownlist = new Array("Select Car", "Saab", "Volvo", "BMW", "bugati");
+                var values2 = new Array(0, 1, 2, 3, 4);
+                adddropdownlist("DropdownList", "dropdownlist1", 40, "please select car", dropdownlist, values2, 1);
+                addlistbox("Listbox", "listbox1", 41, "please select atleast 1 item", radiobuttonlist, values, 1);
+                adddatepicker("Select Date", "date", 1, "please enter date", 7, "please enter valid date", 1);
+                addcaptcha("Captcha", 1);
+
+                var $unique = $('input.unique');
+                $unique.click(function () {
+                    $unique.filter(':checked').not(this).removeAttr('checked');
+                });
+            }); //$(document).ready(function () 
+        });      //$(function() 
+    </script>
+</body>
+</html>
